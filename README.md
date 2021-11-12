@@ -111,9 +111,9 @@ Parameters can be signaled out-of-band or in-band.
 
 Larger changes such as frame size, frame rate, chroma subsampling, bit depth are probably all acceptable for out-of-band signaling.  
 
-> The IETF draft proposes a new MIME Type and a set of required parameters and a few optional ones.  That implies out-of-band signaling.  Is it still flexible enough for the current proposal?
+> TODO: Consider the out-of-band approach using a new MIME Type of the IETF draft.  Is it still flexible enough for the current proposal?
 
-> What is the relevance of AMWA's parameter register? See related activity on JPEG XS.
+> TODO: Consider the the relevance of AMWA's parameter registers and related activity for support of TR-08 and TR-10 in NMOS.
 
 ### In-band signaling
 

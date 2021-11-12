@@ -3,3 +3,7 @@
 *.swp
 *~
 .DS_Store
+.scripts
+node_modules
+package.json
+yarn.lock
