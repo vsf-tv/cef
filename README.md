@@ -8,7 +8,7 @@ This document proposes a default video sample packing format for cloud-to-cloud 
 
 ## Introduction
 
-ST 2110 10-bit pgroup packing was optimised to support a particular set of use cases, but is not well suited to some cloud-cloud cases, as working in multiples of 8 bits is the norm for software applications. Padding to 16 bits is wasteful, and shifting tightly-packed 10-bits imposes an overhead. Also, some receiving applications may only work with 8 bits.
+ST 2110 10-bit pgroup packing was optimised to support a particular set of use cases, but is not well suited to some cloud-cloud cases, as working in multiples of 8 bits is the norm for software applications. Padding to 16 bits is wasteful, and shifting tightly-packed 10-bits imposes an overhead. There is a large body of applications that work in the 8-bit domain, and it may be useful to reuse these applications for use-cases where 10-bit is not needed.
 
 The approach proposed here is to pack the 8 most significant bits of each of a block of pixels (by default a video line) first (“MSB section”), followed by the remaining (less significant) bits of the block at the end (“LSB section”):
 
