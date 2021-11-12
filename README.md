@@ -81,25 +81,46 @@ Other cases could be sent if [suitably signaled](#signaling):
 - Many fully packed formats keep different channel samples of the same pixel together in an order that may not be well defined.  
 - Many fully unpacked formats separate the samples of each channel into separate planes.  
 - Some uses might use an "intermediate" format; for example chroma samples are interleaved together but luma samples are not.
+ 
+## Parameters
+
+To support different use cases CEF has a number of parameters.
+
+Some of these follow from the above descriptions such as:
+
+- picture sizes
+- bit depths
+- chroma resolution
+- planar/interleaved samples
+- block size
+- block alignment
+
+Others are still to be defined.
+
+> TODO: determine a more complete list and document more formally, including parameter names, semantics, constraints and defaults.
+
+> TODO: Consider defining profiles / operating points. For example what is suitable for CDI? What are the most common resolutions?
+
+> TODO: look at the relevant information for VSF's J2K ULL and JPEG XS (TR-08 operating points)/.
 
 ## Signaling
 
-As different use cases may require different settings of picture sizes, bit depths, chroma resolution, planar/interleaved samples, block sizes and alignment, etc., signaling of such parameters is necessary. This could be out-of-band or in-band.
-
-> TODO: more on all of this.
+Parameters can be signaled out-of-band or in-band.
 
 ### Out-of-band signaling
 
-Larger changes such as frame size, frame rate, chroma subsampling, bit depth are probably all acceptable for out-of-band.  
+Larger changes such as frame size, frame rate, chroma subsampling, bit depth are probably all acceptable for out-of-band signaling.  
 
 > The IETF draft proposes a new MIME Type and a set of required parameters and a few optional ones.  That implies out-of-band signaling.  Is it still flexible enough for the current proposal?
+
+> What is the relevance of AMWA's parameter register? See related activity on JPEG XS.
 
 ### In-band signaling
 
 In-band signaling may be more suitable for transient changes such as:
 
-- Notification of data loss such as missing frames, lines or samples
-- Ancillary or side information such as CC/subtitles
+- Notification of data loss such as missing frames, lines or samples.
+- Ancillary or side information such as CC/subtitles.
 
 ## Support for particular uses
 
