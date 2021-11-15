@@ -136,6 +136,6 @@ In-band signaling may be more suitable for transient changes such as:
 
 This could be treated as small images, although sending the image size and position in the larger frame is not in the scope of the current proposal.
 
- ### Previews and thumbnails
+### Previews and thumbnails
 
 Many applications involve rendering of a reduced resolution or quality rendition of a video stream; for example to display in a small window or thumbnail on a browser-based monitoring interface. In such cases processing resources can be reduced by only reading the 8-bit MSBs.
